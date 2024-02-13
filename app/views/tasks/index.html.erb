@@ -1,0 +1,7 @@
+<div>
+  <% @tasks.each do |task|%>
+    <p><%= link_to task.title, task_path(task) %></p>
+
+  <% end %>
+</div>
+<p><%= link_to 'add new task', new_task_path %></p>

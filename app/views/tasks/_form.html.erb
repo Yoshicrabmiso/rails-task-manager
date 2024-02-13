@@ -1,0 +1,15 @@
+<div>
+  <h1>Add Task</h1>
+  <% @task.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+    <!--what can we do instead of using attribute_name?-->
+    <%= f.submit %>
+  <% end %>
+
+</div>
